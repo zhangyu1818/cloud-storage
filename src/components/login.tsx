@@ -89,7 +89,9 @@ export function Login() {
               className='relative block w-full appearance-none rounded-md border border-gray-300 px-3 py-2 text-foreground placeholder-muted-foreground focus:z-10 focus:border-primary focus:outline-none focus:ring-primary sm:text-sm'
             />
           </div>
-          <p className='text-sm text-destructive'>username or password is not correct.</p>
+          {showError && (
+            <p className='text-sm text-destructive'>username or password is not correct.</p>
+          )}
           <div className='flex items-center justify-between'>
             <div className='flex items-center'>
               <Checkbox
